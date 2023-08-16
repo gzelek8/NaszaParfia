@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  dailys:
+    container_name: 'ddd'
+    image: 'ddd'
+    build:
+      context: .
+      dockerfile: Dockerfile-local
+    ports:
+     - "8000:80"
+    depends_on:
+     - "postgres"
+    networks:
+      - DDD-network
+    environment:
+      DB_CONNECTION_STRING: "host=postgres;port=5432;database=DDD;username=user;password=password"
+
+  postgres:
+    container_name: 'postgres'
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: DDD
+    networks:
+      - DDD-network
+    ports:
+      - 5432:5432
+    restart: always
+
+networks:
+  DDD-network:
+    driver: bridge
+volumes:
+  postgres_data:

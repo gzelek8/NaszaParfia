@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  dailys:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+    env_file:
+      - DDD.env
+    volumes:
+      - type: bind
+        source: /.
+        target: /src
+    ports:
+      - 8000:80
