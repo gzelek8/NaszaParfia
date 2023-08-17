@@ -1,13 +1,11 @@
-using DDD.API.Options;
-
-namespace DDD.API.Registrars;
-
-public class SwaggerRegistrar : IWebApplicationBuilderRegistrar
+﻿namespace DDD.API.Registrars
 {
-    public void RegisterServices(WebApplicationBuilder builder)
+    public class SwaggerRegistrar : IWebApplicationBuilderRegistrar
     {
-        builder.Services.AddSwaggerGen();
-
-        builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+        public void RegisterServices(WebApplicationBuilder builder)
+        {
+            builder.Services.AddSwaggerGen();
+            builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+        }
     }
 }

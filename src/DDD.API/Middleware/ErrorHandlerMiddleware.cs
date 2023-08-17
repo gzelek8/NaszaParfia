@@ -1,6 +1,5 @@
 using System.Net;
 using System.Text.Json;
-using DDD.API.Middleware.Extensions;
 
 namespace DDD.API.Middleware;
 

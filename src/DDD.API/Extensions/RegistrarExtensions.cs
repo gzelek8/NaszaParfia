@@ -1,5 +1,3 @@
-using DDD.API.Registrars;
-
 namespace DDD.API.Extensions;
 
 public static class RegistrarExtensions

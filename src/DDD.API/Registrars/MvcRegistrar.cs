@@ -1,28 +1,32 @@
+﻿using DDD.API.Middleware;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 
-namespace DDD.API.Registrars;
-
-public class MvcRegistrar : IWebApplicationBuilderRegistrar
+namespace DDD.API.Registrars
 {
-    public void RegisterServices(WebApplicationBuilder builder)
+    public class MvcRegistrar : IWebApplicationBuilderRegistrar
     {
-        builder.Services.AddControllers();
-
-        builder.Services.AddApiVersioning(config =>
+        public void RegisterServices(WebApplicationBuilder builder)
         {
-            config.DefaultApiVersion = new ApiVersion(1, 0);
-            config.AssumeDefaultVersionWhenUnspecified = true;
-            config.ReportApiVersions = true;
-            config.ApiVersionReader = new UrlSegmentApiVersionReader();
-        });
+            builder.Services.AddControllers(config =>
+            {
+                config.Filters.Add(typeof(ErrorHandlerMiddleware));
+            });
 
-        builder.Services.AddVersionedApiExplorer(config =>
-        {
-            config.GroupNameFormat = "'v'VVV";
-            config.SubstituteApiVersionInUrl = true;
-        });
+            builder.Services.AddApiVersioning(config =>
+            {
+                config.DefaultApiVersion = new ApiVersion(1, 0);
+                config.AssumeDefaultVersionWhenUnspecified = true;
+                config.ReportApiVersions = true;
+                config.ApiVersionReader = new UrlSegmentApiVersionReader();
+            });
 
-        builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddVersionedApiExplorer(config =>
+            {
+                config.GroupNameFormat = "'v'VVV";
+                config.SubstituteApiVersionInUrl = true;
+            });
+            builder.Services.AddEndpointsApiExplorer();
+        }
     }
 }
