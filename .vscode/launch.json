@@ -6,7 +6,7 @@
         "type": "coreclr",
         "request": "launch",
         "preLaunchTask": "build",
-        "program": "${workspaceFolder}/bin/Debug/net6.0/DDD.dll",
+        "program": "${workspaceFolder}/bin/Debug/net6.0/NaszaParafia.dll",
         "args": [],
         "cwd": "${workspaceFolder}",
         "stopAtEntry": false,

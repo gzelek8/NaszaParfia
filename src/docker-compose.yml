@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  dailys:
-    container_name: 'ddd'
-    image: 'ddd'
+  parafia:
+    container_name: 'parafia'
+    image: 'parafia'
     build:
       context: .
       dockerfile: Dockerfile-local
@@ -12,9 +12,9 @@ services:
     depends_on:
      - "postgres"
     networks:
-      - DDD-network
+      - parafia-network
     environment:
-      DB_CONNECTION_STRING: "host=postgres;port=5432;database=DDD;username=user;password=password"
+      DB_CONNECTION_STRING: "host=postgres;port=5432;database=parafia;username=user;password=password"
 
   postgres:
     container_name: 'postgres'
@@ -22,15 +22,15 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: DDD
+      POSTGRES_DB: parafia
     networks:
-      - DDD-network
+      - parafia-network
     ports:
       - 5432:5432
     restart: always
 
 networks:
-  DDD-network:
+  parafia-network:
     driver: bridge
 volumes:
   postgres_data:

@@ -1,12 +1,12 @@
 version: '3.7'
 
 services:
-  dailys:
+  parafia:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=1
     env_file:
-      - DDD.env
+      - NaszaParafia.env
     volumes:
       - type: bind
         source: /.

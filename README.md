@@ -1,13 +1,12 @@
-# DDD
-An application to get drunk as cheap as possible - written in dotnet.
-
+# NaszaParafia
+Application for the church community
 
 ## Prerequisites
 1. [Docker](https://www.docker.com/)
 1. [dotnet](https://dotnet.microsoft.com/en-us/download)
 
 ## Steps
-1. `git clone https://github.com/gzelek8/DailyS.git`
+1. `git clone https://github.com/gzelek8/NaszaParafia.git`
 
 2. `docker-compose build`
 

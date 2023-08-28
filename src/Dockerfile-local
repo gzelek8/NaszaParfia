@@ -1,26 +1,26 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-preview-alpine AS base
 WORKDIR /src
 EXPOSE 5000
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-preview-alpine AS build
 
 WORKDIR /src
 COPY ["./nuget.config", "./nuget.config"]
-COPY ["DDD.API/DDD.API.csproj", "DDD.API/"]
-COPY ["DDD.Domain/DDD.Domain.csproj", "DDD.Domain/"]
-COPY ["DDD.Infrastructure/DDD.Infrastructure.csproj", ".DDD.Infrastructure/"]
-COPY ["DDD.Application/DDD.Application.csproj", "DDD.Application/"]
-RUN dotnet restore "DDD.API/DDD.API.csproj"
+COPY ["NaszaParafia.API/NaszaParafia.API.csproj", "NaszaParafia.API/"]
+COPY ["NaszaParafia.Domain/NaszaParafia.Domain.csproj", "NaszaParafia.Domain/"]
+COPY ["NaszaParafia.Infrastructure/NaszaParafia.Infrastructure.csproj", ".NaszaParafia.Infrastructure/"]
+COPY ["NaszaParafia.Application/NaszaParafia.Application.csproj", "NaszaParafia.Application/"]
+RUN dotnet restore "NaszaParafia.API/NaszaParafia.API.csproj"
 
 COPY . .
-WORKDIR "/src/DDD.API"
-RUN dotnet build "DDD.API.csproj" -c Release -o /app
+WORKDIR "/src/NaszaParafia.API"
+RUN dotnet build "NaszaParafia.API.csproj" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "DDD.API.csproj" -c Release -o /app
+RUN dotnet publish "NaszaParafia.API.csproj" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
 
-ENTRYPOINT ["dotnet", "DDD.API.dll"]
+ENTRYPOINT ["dotnet", "NaszaParafia.API.dll"]

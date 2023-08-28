@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-preview-alpine AS base
 ARG BUILD_SOURCEVERSION
 ARG BUILD_BUILDID
 ARG BUILD_BUILDNUMBER
@@ -15,4 +15,4 @@ RUN addgroup devsgroup --gid 10002 && adduser devuser -D -u 10001 -G devsgroup &
 
 USER 10001
 
-ENTRYPOINT ["dotnet", "DDD.API.dll"]
+ENTRYPOINT ["dotnet", "NaszaParafia.API.dll"]
