@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\NaszaParafia.API", "src\NaszaParafia.API\NaszaParafia.API.csproj", "{B4E6BA37-B288-46B4-8281-93DCBBC0B3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\NaszaParafia.Application", "src\NaszaParafia.Application\NaszaParafia.Application.csproj", "{C4444243-983A-45D7-82E6-E75945D7F87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\NaszaParafia.Infrastructure", "src\NaszaParafia.Infrastructure\NaszaParafia.Infrastructure.csproj", "{5CAB6ACD-5A53-4E77-AE2D-2B73D0DBFFCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\NaszaParafia.Domain", "src\NaszaParafia.Domain\NaszaParafia.Domain.csproj", "{41FC36E0-4E63-498A-A697-BE90F499F319}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9FF7447-0929-46BB-8565-BE6D8FD5BA88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaszaParafia.Dal", "src\NaszaParafia.Dal\NaszaParafia.Dal.csproj", "{A27302C3-5E5B-4D57-A887-964CE0ADA778}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC707276-A5C1-42BA-A56C-A18678DBE147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC707276-A5C1-42BA-A56C-A18678DBE147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC707276-A5C1-42BA-A56C-A18678DBE147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC707276-A5C1-42BA-A56C-A18678DBE147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E6BA37-B288-46B4-8281-93DCBBC0B3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E6BA37-B288-46B4-8281-93DCBBC0B3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E6BA37-B288-46B4-8281-93DCBBC0B3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E6BA37-B288-46B4-8281-93DCBBC0B3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4444243-983A-45D7-82E6-E75945D7F87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4444243-983A-45D7-82E6-E75945D7F87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4444243-983A-45D7-82E6-E75945D7F87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4444243-983A-45D7-82E6-E75945D7F87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAB6ACD-5A53-4E77-AE2D-2B73D0DBFFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAB6ACD-5A53-4E77-AE2D-2B73D0DBFFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAB6ACD-5A53-4E77-AE2D-2B73D0DBFFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAB6ACD-5A53-4E77-AE2D-2B73D0DBFFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FC36E0-4E63-498A-A697-BE90F499F319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FC36E0-4E63-498A-A697-BE90F499F319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FC36E0-4E63-498A-A697-BE90F499F319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FC36E0-4E63-498A-A697-BE90F499F319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27302C3-5E5B-4D57-A887-964CE0ADA778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27302C3-5E5B-4D57-A887-964CE0ADA778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27302C3-5E5B-4D57-A887-964CE0ADA778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27302C3-5E5B-4D57-A887-964CE0ADA778}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A27302C3-5E5B-4D57-A887-964CE0ADA778} = {D9FF7447-0929-46BB-8565-BE6D8FD5BA88}
+	EndGlobalSection
+EndGlobal
