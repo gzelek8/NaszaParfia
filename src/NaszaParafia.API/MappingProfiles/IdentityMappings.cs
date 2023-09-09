@@ -1,6 +1,4 @@
-﻿using NaszaParafia.Application.Identity.Dtos;
-
-namespace NaszaParafia.API.MappingProfiles;
+﻿namespace NaszaParafia.API.MappingProfiles;
 
 public class IdentityMappings : Profile
 {

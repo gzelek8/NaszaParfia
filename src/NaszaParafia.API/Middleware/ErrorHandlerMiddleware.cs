@@ -1,6 +1,3 @@
-using System.Net;
-using System.Text.Json;
-
 namespace NaszaParafia.API.Middleware;
 
 public class ErrorHandlerMiddleware

@@ -1,6 +1,4 @@
-﻿using NaszaParafia.Application.Services;
-
-namespace NaszaParafia.API.Registrars;
+﻿namespace NaszaParafia.API.Registrars;
 
 public class ApplicationLayerRegistrar : IWebApplicationBuilderRegistrar
 {

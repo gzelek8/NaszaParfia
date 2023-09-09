@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-
-namespace NaszaParafia.API.Extensions;
+﻿namespace NaszaParafia.API.Extensions;
 
 public static class HttpContextExtensions
 {

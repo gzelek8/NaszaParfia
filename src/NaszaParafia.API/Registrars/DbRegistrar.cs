@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace NaszaParafia.API.Registrars
+﻿namespace NaszaParafia.API.Registrars
 {
     public class DbRegistrar : IWebApplicationBuilderRegistrar
     {

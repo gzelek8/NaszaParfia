@@ -1,7 +1,3 @@
-using AutoMapper;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
 namespace NaszaParafia.API.Controllers;
 
 [ApiVersion("1.0")]

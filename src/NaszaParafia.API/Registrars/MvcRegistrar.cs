@@ -1,8 +1,4 @@
-﻿using NaszaParafia.API.Middleware;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Versioning;
-
-namespace NaszaParafia.API.Registrars
+﻿namespace NaszaParafia.API.Registrars
 {
     public class MvcRegistrar : IWebApplicationBuilderRegistrar
     {
